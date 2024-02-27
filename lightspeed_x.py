@@ -1,4 +1,5 @@
 from typing import Any, Literal
+import warnings
 
 import httpx
 
@@ -92,6 +93,11 @@ class LightspeedX(object):
         Raises:
             httpx.HTTPStatusError: If the API request fails.
         """
+        if api_version == "0.9":
+            warnings.warn(
+                "API Version 0.9 is depreciated. Consider using Version 2.0 instead."
+            )
+
         if not path.startswith("/"):
             path = "/" + path
 
@@ -128,7 +134,6 @@ class LightspeedX(object):
         """
         return self.request("GET", path, params, data, api_version)
 
-
     def post(
         self,
         path: str,
@@ -153,7 +158,6 @@ class LightspeedX(object):
         """
         return self.request("POST", path, params, data, api_version)
 
-
     def put(
         self,
         path: str,
@@ -177,7 +181,6 @@ class LightspeedX(object):
             httpx.HTTPStatusError: If the API request fails.
         """
         return self.request("PUT", path, params, data, api_version)
-
 
     def delete(
         self,
