@@ -1,0 +1,8 @@
+/.venv
+/__pycache__
+/categories.txt
+/download_all_categories.py
+/enable_inventory_tracking.py
+/find_uncategorised_products.py
+/uncategories_products.txt
+/update_product_categories.py
