@@ -1,6 +1,14 @@
-from typing import Any
+from typing import Any, Literal
 
 import httpx
+
+
+APIVersion = Literal[
+    "0.9",
+    "2.0",
+    "2.1",
+    "3.0",
+]
 
 
 class LightspeedX(object):
@@ -66,7 +74,7 @@ class LightspeedX(object):
         path: str,
         params: Any = None,
         data: Any = None,
-        api_version="2.0",
+        api_version: APIVersion = "2.0",
     ) -> Any:
         """
         Performs an HTTP request to the Lightspeed eCom API.
@@ -97,7 +105,11 @@ class LightspeedX(object):
         return res.json()
 
     def get(
-        self, path: str, params: Any = None, data: Any = None, api_version="2.0"
+        self,
+        path: str,
+        params: Any = None,
+        data: Any = None,
+        api_version: APIVersion = "2.0",
     ) -> Any:
         """
         Performs a GET request to the Lightspeed eCom API.
@@ -122,7 +134,7 @@ class LightspeedX(object):
         path: str,
         params: Any = None,
         data: Any = None,
-        api_version="2.0",
+        api_version: APIVersion = "2.0",
     ) -> Any:
         """
         Performs a POST request to the Lightspeed eCom API.
@@ -147,7 +159,7 @@ class LightspeedX(object):
         path: str,
         params: Any = None,
         data: Any = None,
-        api_version="2.0",
+        api_version: APIVersion = "2.0",
     ) -> Any:
         """
         Performs a PUT request to the Lightspeed eCom API.
@@ -172,7 +184,7 @@ class LightspeedX(object):
         path: str,
         params: Any = None,
         data: Any = None,
-        api_version="2.0",
+        api_version: APIVersion = "2.0",
     ) -> Any:
         """
         Performs a DELETE request to the Lightspeed eCom API.
