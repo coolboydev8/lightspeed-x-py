@@ -117,76 +117,76 @@ class LightspeedX(object):
         return self.request("GET", path, params, data, api_version)
 
 
-def post(
-    self,
-    path: str,
-    params: Any = None,
-    data: Any = None,
-    api_version="2.0",
-) -> Any:
-    """
-    Performs a POST request to the Lightspeed eCom API.
+    def post(
+        self,
+        path: str,
+        params: Any = None,
+        data: Any = None,
+        api_version="2.0",
+    ) -> Any:
+        """
+        Performs a POST request to the Lightspeed eCom API.
 
-    Args:
-        path (str): The API endpoint path.
-        params (Any, optional): A dictionary of query parameters. Defaults to None.
-        data (Any, optional): The request body data. Defaults to None.
-        api_version (str, optional): The API version to use. Defaults to "2.0".
+        Args:
+            path (str): The API endpoint path.
+            params (Any, optional): A dictionary of query parameters. Defaults to None.
+            data (Any, optional): The request body data. Defaults to None.
+            api_version (str, optional): The API version to use. Defaults to "2.0".
 
-    Returns:
-        Any: The JSON-parsed response from the API.
+        Returns:
+            Any: The JSON-parsed response from the API.
 
-    Raises:
-        httpx.HTTPStatusError: If the API request fails.
-    """
-    return self.request("POST", path, params, data, api_version)
-
-
-def put(
-    self,
-    path: str,
-    params: Any = None,
-    data: Any = None,
-    api_version="2.0",
-) -> Any:
-    """
-    Performs a PUT request to the Lightspeed eCom API.
-
-    Args:
-        path (str): The API endpoint path.
-        params (Any, optional): A dictionary of query parameters. Defaults to None.
-        data (Any, optional): The request body data. Defaults to None.
-        api_version (str, optional): The API version to use. Defaults to "2.0".
-
-    Returns:
-        Any: The JSON-parsed response from the API.
-
-    Raises:
-        httpx.HTTPStatusError: If the API request fails.
-    """
-    return self.request("PUT", path, params, data, api_version)
+        Raises:
+            httpx.HTTPStatusError: If the API request fails.
+        """
+        return self.request("POST", path, params, data, api_version)
 
 
-def delete(
-    self,
-    path: str,
-    params: Any = None,
-    data: Any = None,
-    api_version="2.0",
-) -> Any:
-    """
-    Performs a DELETE request to the Lightspeed eCom API.
+    def put(
+        self,
+        path: str,
+        params: Any = None,
+        data: Any = None,
+        api_version="2.0",
+    ) -> Any:
+        """
+        Performs a PUT request to the Lightspeed eCom API.
 
-    Args:
-        path (str): The API endpoint path.
-        params (Any, optional): A dictionary of query parameters. Defaults to None.
-        data (Any, optional): The request body data. Defaults to None.
-        api_version (str, optional): The API version to use. Defaults to "2.0".
+        Args:
+            path (str): The API endpoint path.
+            params (Any, optional): A dictionary of query parameters. Defaults to None.
+            data (Any, optional): The request body data. Defaults to None.
+            api_version (str, optional): The API version to use. Defaults to "2.0".
 
-    Returns:
-        Any: The JSON-parsed response from the API.
+        Returns:
+            Any: The JSON-parsed response from the API.
 
-    Raises:
-        httpx.HTTPStatusError: If the API request fails.
-    """
-    return self.request("DELETE", path, params, data, api_version)
+        Raises:
+            httpx.HTTPStatusError: If the API request fails.
+        """
+        return self.request("PUT", path, params, data, api_version)
+
+
+    def delete(
+        self,
+        path: str,
+        params: Any = None,
+        data: Any = None,
+        api_version="2.0",
+    ) -> Any:
+        """
+        Performs a DELETE request to the Lightspeed eCom API.
+
+        Args:
+            path (str): The API endpoint path.
+            params (Any, optional): A dictionary of query parameters. Defaults to None.
+            data (Any, optional): The request body data. Defaults to None.
+            api_version (str, optional): The API version to use. Defaults to "2.0".
+
+        Returns:
+            Any: The JSON-parsed response from the API.
+
+        Raises:
+            httpx.HTTPStatusError: If the API request fails.
+        """
+        return self.request("DELETE", path, params, data, api_version)
