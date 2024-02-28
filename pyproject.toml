@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "lightspeed_x"
 version = "0.1.0"
 dependencies = ["httpx"]
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 authors = [
     {name = "nilaster", email = "nilaster@riseup.net"},
 ]
@@ -16,6 +16,8 @@ license = {text = "MIT license"}
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
