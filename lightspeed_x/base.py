@@ -1,15 +1,9 @@
-from typing import Any, Literal
+from typing import Any
 import warnings
 
 import httpx
 
-
-APIVersion = Literal[
-    "0.9",
-    "2.0",
-    "2.1",
-    "3.0",
-]
+from .types import APIVersion
 
 
 class LightspeedX(object):
